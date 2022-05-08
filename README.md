@@ -36,7 +36,7 @@ new ButtonExample2(),
 ## Download
 O mais recente .jar estará dentro do  [Projeto/releases](https://github.com/uJ0hn/sCommandHandler/releases) pronto para ser utilizado
 ## Maven
-```java
+```xml
 //pom.xml
 <dependency>  
     <groupId>com.github.uJ0hn</groupId>  
