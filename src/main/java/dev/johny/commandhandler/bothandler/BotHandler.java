@@ -19,10 +19,13 @@ public abstract class BotHandler extends Application {
      * <a href="Clique aqui para acessar o discord developers e pegar o token">https://discord.com/developers/applications</a>
      * @param jda Seu public JDA definido na main para iniciar o bot
      */
+
+    public final ConfigManager configmanager;
     public  BotHandler(String token, JDA jda) {
         this.token = token;
         this.jda = jda;
         instance = this;
+        configmanager = new ConfigManager();
     }
     /**
      * Codigo de inicialização do bot JDA
@@ -36,9 +39,14 @@ public abstract class BotHandler extends Application {
      * Codigo para iniciar o bot sem você precisa construir o JDABuilder no JDA.
      * Exemplo: jda = setupBot(); na sua Main
      */
+
     public JDA setupBot() throws LoginException {
         return JDABuilder.createDefault(this.token).build();
     }
+
+
+
+
 
 
     public static BotHandler getInstance(){
