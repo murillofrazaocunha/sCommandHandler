@@ -39,6 +39,16 @@ public abstract class SlashHandler extends ListenerAdapter {
         if(event.getName().equals(nome)) {
             this.executeSlash(event);
         }
+        if (getAliases() != null) {
+            for (String s: getAliases()) {
+                if(event.getName().equals(s)) {
+                    this.executeSlash(event);
+                }
+            }
+         }
+    }
+    public String[] getAliases() {
+        return this.aliases;
     }
 
 
