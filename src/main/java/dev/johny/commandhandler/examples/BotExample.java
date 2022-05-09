@@ -11,7 +11,7 @@ import javax.security.auth.login.LoginException;
 public class BotExample extends BotHandler {
     public static JDA jda;
     public BotExample() {
-        super("OTcyNzAwNjg3NjE4MTcwOTMx.G3a6d_.13RlsmD_-4moPTT89wAp4WdgP49NWARGYNjXbM", jda);
+        super("TOKEN", jda);
     }
 
 
